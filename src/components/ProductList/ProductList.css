@@ -1,0 +1,12 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-card {
+
+    img {
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+    }
+}

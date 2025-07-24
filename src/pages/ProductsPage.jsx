@@ -1,5 +1,21 @@
+import { useEffect, useState } from "react"
+import ProductList from "../components/ProductList/ProductList";
+
 export default function ProductsPage() {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error(error));
+    }, [])
+
     return (
-        <h1>Products</h1>
+        <div style={{ display: "flex", flexDirection: 'column', alignItems: 'center' }}>
+            <h1>Products</h1>
+            <ProductList products={products} />
+        </div>
     )
 }

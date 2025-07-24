@@ -4,3 +4,13 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
