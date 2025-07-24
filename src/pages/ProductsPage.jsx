@@ -13,9 +13,15 @@ export default function ProductsPage() {
     }, [])
 
     return (
-        <div style={{ display: "flex", flexDirection: 'column', alignItems: 'center' }}>
-            <h1 style={{ paddingTop: 40, paddingBottom: 40 }}>Products</h1>
-            <ProductList products={products} />
-        </div>
+        <>
+            <div className="jumbotron-secondary">
+                <div>
+                    <h1>ALL PRODUCTS</h1>
+                </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: 'column', alignItems: 'center' }}>
+                <ProductList products={products} />
+            </div>
+        </>
     )
 }
