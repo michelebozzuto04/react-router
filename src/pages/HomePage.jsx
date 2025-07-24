@@ -1,18 +1,15 @@
-import { useEffect } from "react";
-import Header from "../components/Header/Header";
+import { Link } from "react-router-dom";
 
-export default function HomePage({ products }) {
-
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
-    }, [])
+export default function HomePage() {
 
     return (
-        <>
-            <h1>Home</h1>
-        </>
+        <div className="jumbotron">
+            <div>
+                <h1>WELCOME TO OUR WEBSITE!</h1>
+                <Link to={"/products"}>
+                    <button className="btn btn-primary">Shop Products</button>
+                </Link>
+            </div>
+        </div>
     )
 }

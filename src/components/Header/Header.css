@@ -5,16 +5,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
 
     ul {
         display: flex;
         flex-direction: row;
-        gap: 15px;
+        gap: 25px;
         list-style: none;
 
         .nav-link {
             color: rgba(0, 0, 0, 0.5);
             text-decoration: none;
+            text-transform: uppercase;
 
         }
 
