@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { IoStar } from "react-icons/io5";
+import { IoArrowBack, IoArrowForward, IoStar } from "react-icons/io5";
 import { OrbitProgress } from "react-loading-indicators";
-import { useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 export default function SingleProductPage() {
 
@@ -12,12 +12,9 @@ export default function SingleProductPage() {
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                setProduct(data)
-            })
+            .then(data => setProduct(data))
             .catch(error => console.error(error));
-    }, [])
+    }, [id])
 
     return (
         <>
@@ -40,6 +37,19 @@ export default function SingleProductPage() {
                                 <button className="btn btn-outline">Add to cart</button>
                                 <button className="btn btn-primary">Buy now</button>
                             </div>
+                        </div>
+                        <div className="navigation-container">
+                            <Link to={`/products/${parseInt(id) - 1}`}>
+                                <div className="navigation-btn">
+                                    <IoArrowBack size={40} color='#fff' />
+                                </div>
+                            </Link>
+
+                            <Link to={`/products/${parseInt(id) + 1}`}>
+                                <div className="navigation-btn">
+                                    <IoArrowForward size={40} color='#fff' />
+                                </div>
+                            </Link>
                         </div>
                     </> :
                     <OrbitProgress variant="split-disc" color="#27DEFF" size="medium" text="" textColor="" />
