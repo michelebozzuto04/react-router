@@ -127,12 +127,68 @@ img {
       gap: 5px;
       margin-bottom: 5px;
 
-      span {
+      .rating-rate {
         font-size: 20px;
         line-height: 20px;
         font-weight: 600;
         color: rgba(0, 0, 0, 0.6);
       }
+
+      .rating-count {
+        margin-left: 10px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+      }
     }
+
+    hr {
+      opacity: 0.2;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 30px;
+      font-weight: 00;
+      color: black;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 10px;
+
+      .btn {
+        width: 40%;
+        padding: 15px 30px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        color: white;
+        background-color: black;
+        border: 2px solid black;
+      }
+
+      .btn-primary:hover {
+        cursor: pointer;
+        background-color: rgb(63, 63, 63);
+        border: 2px solid rgb(63, 63, 63);
+      }
+
+      .btn-outline {
+        color: black;
+        background-color: transparent;
+        border: 2px solid black;
+      }
+
+      .btn-outline:hover {
+        cursor: pointer;
+        background-color: rgb(242, 242, 242);
+        border: 2px solid black;
+      }
+    }
+
   }
 }

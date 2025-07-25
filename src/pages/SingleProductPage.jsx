@@ -27,11 +27,17 @@ export default function SingleProductPage() {
                         <span className='product-category'>{product.category}</span>
                         <span className='product-title'>{product.title}</span>
                         <div className='product-rating-container'>
-                            <span>{product.rating.rate}</span>
+                            <span className="rating-rate">{product.rating.rate}</span>
                             <IoStar size={26} color='#ffc400' />
+                            <span className="rating-count">{product.rating.count} Ratings</span>
                         </div>
+                        <hr />
                         <span className='product-description'>{product.description}</span>
                         <span className='product-price'>{'$' + product.price}</span>
+                        <div className="cta">
+                            <button className="btn btn-outline">Add to cart</button>
+                            <button className="btn btn-primary">Buy now</button>
+                        </div>
                     </div>
                 </div> :
                 <h1>Loading...</h1>
