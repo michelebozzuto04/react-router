@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ProductList from "../components/ProductList/ProductList";
+import { Navigate } from "react-router-dom";
 
 export default function ProductsPage() {
 
@@ -9,7 +10,9 @@ export default function ProductsPage() {
         fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
             .then(data => setProducts(data))
-            .catch(error => console.error(error));
+            .catch(error => {
+                console.error(error)
+            });
     }, [])
 
     return (
