@@ -23,7 +23,7 @@ export default function Header() {
     return (
         <div className="headerContainer">
             <div style={{ width: '33%' }}>
-                <a href="#">
+                <a href="/">
                     <img src={logo} />
                 </a>
             </div>
